@@ -1,0 +1,190 @@
+.wrapper {
+  background: #212121; }
+  .wrapper:before, .wrapper:after {
+    content: "";
+    display: table; }
+  .wrapper:after {
+    clear: both; }
+
+section {
+  margin: 30px 0; }
+
+h1 {
+  font-size: 40px;
+  font-weight: 600;
+  font-family: "Open Sans", sans-serif; }
+  @media (min-width: 992px) {
+    h1 {
+      font-size: 60px; } }
+
+h2 {
+  font-size: 25px;
+  font-weight: 700;
+  font-family: "Open Sans", sans-serif; }
+  @media (min-width: 992px) {
+    h2 {
+      font-size: 30px; } }
+
+h3 {
+  font-size: 25px;
+  font-weight: 600;
+  font-family: "Open Sans", sans-serif; }
+  @media (min-width: 576px) {
+    h3 {
+      font-size: 20px; } }
+  @media (min-width: 768px) {
+    h3 {
+      font-size: 25px; } }
+  @media (min-width: 992px) {
+    h3 {
+      font-size: 30px; } }
+
+h4 {
+  font-size: 20px;
+  font-weight: 500;
+  font-family: "Open Sans", sans-serif;
+  text-align: justify; }
+  @media (min-width: 576px) {
+    h4 {
+      font-size: 14px; } }
+  @media (min-width: 768px) {
+    h4 {
+      font-size: 15px; } }
+  @media (min-width: 1280px) {
+    h4 {
+      font-size: 20px; } }
+
+h5 {
+  font-size: 25px;
+  font-weight: 600;
+  font-family: "Open Sans", sans-serif;
+  text-align: justify; }
+  @media (min-width: 576px) {
+    h5 {
+      font-size: 20px; } }
+  @media (min-width: 768px) {
+    h5 {
+      font-size: 25px; } }
+
+p {
+  font-size: 14px;
+  font-weight: 400;
+  font-family: "Open Sans", sans-serif;
+  text-align: justify; }
+
+.horizontal-line {
+  width: 100%;
+  height: 2px;
+  background: #8e8f8c;
+  margin-bottom: 20px; }
+
+.vertical-line {
+  width: 2px;
+  height: 100%;
+  background: #000;
+  position: absolute;
+  top: 5px;
+  bottom: 0;
+  left: -20px; }
+  @media (min-width: 768px) {
+    .vertical-line {
+      left: -30px; } }
+
+.black-part {
+  width: 100%;
+  background: #212121;
+  float: left;
+  color: #fff; }
+  .black-part:before, .black-part:after {
+    content: "";
+    display: table; }
+  .black-part:after {
+    clear: both; }
+  @media (min-width: 576px) {
+    .black-part {
+      width: 38.4%; } }
+  .black-part .content {
+    width: 90%;
+    margin: 5% 5%;
+    text-align: center; }
+    @media (min-width: 1280px) {
+      .black-part .content {
+        margin: 5% 15%;
+        width: 71%; } }
+    @media (min-width: 992px) {
+      .black-part .content {
+        width: 80%;
+        margin: 5% 10%; } }
+    .black-part .content .portfolio-photo {
+      width: 100%;
+      padding-top: 100.8%;
+      position: relative;
+      border: 2px solid #eeeeee;
+      border-radius: 50%;
+      margin: 50px 0; }
+      .black-part .content .portfolio-photo .img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url("../resources/img/Donald_Trump_official_portrait.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        border-radius: 50%; }
+    .black-part .content ul {
+      text-align: left; }
+      @media (min-width: 576px) {
+        .black-part .content ul {
+          padding-left: 20px; } }
+      .black-part .content ul li {
+        font-size: 17px; }
+        @media (min-width: 576px) {
+          .black-part .content ul li {
+            font-size: 12px; } }
+        @media (min-width: 768px) {
+          .black-part .content ul li {
+            font-size: 16px; } }
+        @media (min-width: 992px) {
+          .black-part .content ul li {
+            font-size: 17px; } }
+        .black-part .content ul li a {
+          color: #fff;
+          cursor: pointer; }
+
+.white-part {
+  width: 100%;
+  background: #f1eaeb;
+  float: left; }
+  .white-part:before, .white-part:after {
+    content: "";
+    display: table; }
+  .white-part:after {
+    clear: both; }
+  @media (min-width: 576px) {
+    .white-part {
+      width: 61.6%; } }
+  .white-part .content {
+    width: 80%;
+    margin: 5% 10%; }
+    @media (min-width: 768px) {
+      .white-part .content {
+        width: 70%;
+        margin: 5% 15%; } }
+    .white-part .content .timeline .chronology {
+      position: relative; }
+      .white-part .content .timeline .chronology h5 {
+        position: relative; }
+      .white-part .content .timeline .chronology h5::before {
+        height: 11px;
+        width: 11px;
+        border-radius: 50%;
+        background: #000;
+        position: absolute;
+        top: 5px;
+        left: -24px;
+        content: "";
+        display: block; }
+        @media (min-width: 768px) {
+          .white-part .content .timeline .chronology h5::before {
+            left: -34px; } }

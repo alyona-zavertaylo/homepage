@@ -1,0 +1,227 @@
+@mixin breakpoint($class) {
+  @if $class == xs {
+    @media (max-width: 575px) {
+      @content;
+    }
+  } @else if $class == sm {
+    @media (min-width: 576px) {
+      @content;
+    }
+  } @else if $class == md {
+    @media (min-width: 768px) {
+      @content;
+    }
+  } @else if $class == lg {
+    @media (min-width: 992px) {
+      @content;
+    }
+  } @else if $class == xl {
+    @media (min-width: 1280px) {
+      @content;
+    }
+  } @else {
+    @warn "Breakpoint mixin supports: xs, sm, md, lg, xl";
+  }
+}
+@mixin clearfix() {
+  &:before,
+  &:after {
+    content: "";
+    display: table;
+  }
+  &:after {
+    clear: both;
+  }
+}
+.wrapper {
+  background: #212121;
+  @include clearfix();
+}
+section {
+  margin: 30px 0;
+}
+h1 {
+  font-size: 40px;
+  font-weight: 600;
+  font-family: "Open Sans", sans-serif;
+  @include breakpoint(lg) {
+    font-size: 60px;
+  }
+}
+h2 {
+  font-size: 25px;
+  font-weight: 700;
+  font-family: "Open Sans", sans-serif;
+  @include breakpoint(lg) {
+    font-size: 30px;
+  }
+}
+h3 {
+  font-size: 25px;
+  font-weight: 600;
+  font-family: "Open Sans", sans-serif;
+  @include breakpoint(sm) {
+    font-size: 20px;
+  }
+  @include breakpoint(md) {
+    font-size: 25px;
+  }
+  @include breakpoint(lg) {
+    font-size: 30px;
+  }
+}
+h4 {
+  font-size: 20px;
+  font-weight: 500;
+  font-family: "Open Sans", sans-serif;
+  text-align: justify;
+  @include breakpoint(sm) {
+    font-size: 14px;
+  }
+  @include breakpoint(md) {
+    font-size: 15px;
+  }
+  @include breakpoint(xl) {
+    font-size: 20px;
+  }
+}
+h5 {
+  font-size: 25px;
+  font-weight: 600;
+  font-family: "Open Sans", sans-serif;
+  text-align: justify;
+  @include breakpoint(sm) {
+    font-size: 20px;
+  }
+  @include breakpoint(md) {
+    font-size: 25px;
+  }
+}
+p {
+  font-size: 14px;
+  font-weight: 400;
+  font-family: "Open Sans", sans-serif;
+  text-align: justify;
+}
+.horizontal-line {
+  width: 100%;
+  height: 2px;
+  background: #8e8f8c;
+  margin-bottom: 20px;
+}
+.vertical-line {
+  width: 2px;
+  height: 100%;
+  background: #000;
+  position: absolute;
+  top: 5px;
+  bottom: 0;
+  left: -20px;
+  @include breakpoint(md) {
+    left: -30px;
+  }
+}
+.black-part {
+  @include clearfix();
+
+  width: 100%;
+  background: #212121;
+  float: left;
+  color: #fff;
+  @include breakpoint(sm) {
+    width: 38.4%;
+  }
+  .content {
+    @include breakpoint(xl) {
+      margin: 5% 15%;
+      width: 71%;
+    }
+    @include breakpoint(lg) {
+      width: 80%;
+      margin: 5% 10%;
+    }
+    width: 90%;
+    margin: 5% 5%;
+    text-align: center;
+    .portfolio-photo {
+      width: 100%;
+      padding-top: 100.8%;
+      position: relative;
+      border: 2px solid #eeeeee;
+      border-radius: 50%;
+      margin: 50px 0;
+      .img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url("../resources/img/Donald_Trump_official_portrait.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        border-radius: 50%;
+      }
+    }
+    ul {
+      text-align: left;
+      @include breakpoint(sm) {
+        padding-left: 20px;
+      }
+      li {
+        font-size: 17px;
+        @include breakpoint(sm) {
+          font-size: 12px;
+        }
+        @include breakpoint(md) {
+          font-size: 16px;
+        }
+        @include breakpoint(lg) {
+          font-size: 17px;
+        }
+        a {
+          color: #fff;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
+.white-part {
+  @include clearfix();
+  width: 100%;
+  background: #f1eaeb;
+  float: left;
+  @include breakpoint(sm) {
+    width: 61.6%;
+  }
+  .content {
+    width: 80%;
+    margin: 5% 10%;
+    @include breakpoint(md) {
+      width: 70%;
+      margin: 5% 15%;
+    }
+    .timeline {
+      .chronology {
+        position: relative;
+        h5 {
+          position: relative;
+        }
+        h5::before {
+          height: 11px;
+          width: 11px;
+          border-radius: 50%;
+          background: #000;
+          position: absolute;
+          top: 5px;
+          left: -24px;
+          content: "";
+          display: block;
+          @include breakpoint(md) {
+            left: -34px;
+          }
+        }
+      }
+    }
+  }
+}
